@@ -5,8 +5,13 @@ const router = express.Router();
 // destructuracion
 const { UserController } = controllers
 
+// 
 
-router.get('/', UserController.findAll);
-router.post('/', UserController.create)
+  "/users"
+  router.get('/', UserController.findAll);
+  router.post('/', UserController.create);
+  
+  // estamos enviando data por el body
+  router.post('/login', UserController.login)
 
 module.exports = router;

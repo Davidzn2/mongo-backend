@@ -35,6 +35,8 @@ const mongoConnect = async ()=>{
     }
 }
 
+// aqui podemos usar versionado de metodos
+// /api/v1/
 app.use('/', indexRouter); // cargamos el html
 app.use('/users', usersRouter); // los metodos de usuario
 app.use('/tasks', tasksRouter); // los metodos de tareas
