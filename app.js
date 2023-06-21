@@ -40,7 +40,7 @@ const mongoConnect = async ()=>{
 app.use('/', indexRouter); // cargamos el html
 app.use('/users', usersRouter); // los metodos de usuario
 app.use('/tasks', tasksRouter); // los metodos de tareas
-app.use('/perritos', petsRotuer)
+app.use('/pets', petsRotuer)
 
 mongoConnect()
 
