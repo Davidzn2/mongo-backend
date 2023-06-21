@@ -1,9 +1,17 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const controllers = require('../controllers')
+const router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// destructuracion
+const { UserController } = controllers
+
+// 
+
+  "/users"
+  router.get('/', UserController.findAll);
+  router.post('/', UserController.create);
+  
+  // estamos enviando data por el body
+  router.post('/login', UserController.login)
 
 module.exports = router;
