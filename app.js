@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const cors = require('cors')
+
 require('dotenv').config()
 
 const indexRouter = require('./routes/index');
@@ -12,6 +14,7 @@ const petsRotuer = require('./routes/pets');
 
 const app = express();
 
+app.use(cors())
 
 // middlewares
 app.use(logger('dev'));
